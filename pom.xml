@@ -168,11 +168,6 @@
                     <mainClass>org.test.int1.Main</mainClass>
                 </configuration>
             </plugin>
-            <plugin>
-            	<groupId>org.apache.maven.plugins</groupId>
-            	<artifactId>maven-war-plugin</artifactId>
-            	<version>3.1.0</version>
-            </plugin>
         </plugins>
     </build>
 </project>
