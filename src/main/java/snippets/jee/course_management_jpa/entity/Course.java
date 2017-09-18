@@ -1,8 +1,12 @@
 package snippets.jee.course_management_jpa.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 /**
  * The persistent class for the course database table.
