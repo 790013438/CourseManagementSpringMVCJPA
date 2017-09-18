@@ -9,21 +9,19 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@Table(name="course")
 @NamedQuery(name="Course.findAll", query="SELECT c FROM Course c")
 public class Course implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int id;
 
-	private int credits;
+    private int credits;
 
     private String name;
 
-    @Column(name="teacher_id")
-    private int teacherId;
+    private int teacher_id;
 
     public Course() {
     }
@@ -52,12 +50,12 @@ public class Course implements Serializable {
         this.name = name;
     }
 
-    public int getTeacherId() {
-        return this.teacherId;
+    public int getTeacher_id() {
+        return this.teacher_id;
     }
 
-    public void setTeacherId(int teacherId) {
-        this.teacherId = teacherId;
+    public void setTeacher_id(int teacher_id) {
+        this.teacher_id = teacher_id;
     }
 
 }
