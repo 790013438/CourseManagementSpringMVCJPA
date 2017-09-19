@@ -1,14 +1,21 @@
 package snippets.jee.course_management_jpa.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 /**
  * The persistent class for the course database table.
  * 
  */
 @Entity
+@Table(name="course")
 @NamedQuery(name="Course.findAll", query="SELECT c FROM Course c")
 public class Course implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -21,41 +28,42 @@ public class Course implements Serializable {
 
 	private String name;
 
-	private int teacher_id;
+    @Column(name="teacher_id")
+    private int teacherId;
 
-	public Course() {
-	}
+    public Course() {
+    }
 
-	public int getId() {
-		return this.id;
-	}
+    public int getId() {
+        return this.id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public int getCredits() {
-		return this.credits;
-	}
+    public int getCredits() {
+        return this.credits;
+    }
 
-	public void setCredits(int credits) {
-		this.credits = credits;
-	}
+    public void setCredits(int credits) {
+        this.credits = credits;
+    }
 
-	public String getName() {
-		return this.name;
-	}
+    public String getName() {
+        return this.name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public int getTeacher_id() {
-		return this.teacher_id;
-	}
+    public int getTeacherId() {
+        return teacherId;
+    }
 
-	public void setTeacher_id(int teacher_id) {
-		this.teacher_id = teacher_id;
-	}
+    public void setTeacherId(int teacherId) {
+        this.teacherId = teacherId;
+    }
 
 }
