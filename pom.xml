@@ -123,20 +123,7 @@
         <dependency>
         	<groupId>javax.servlet</groupId>
         	<artifactId>javax.servlet-api</artifactId>
-        	<version>3.1.0</version>
-        	<scope>provided</scope>
-        </dependency>
-        <dependency>
-        	<groupId>javax.faces</groupId>
-        	<artifactId>jsf-api</artifactId>
-        	<version>1.2-20</version>
-        	<scope>provided</scope>
-        </dependency>
-        <dependency>
-        	<groupId>javax.faces</groupId>
-        	<artifactId>jsf-impl</artifactId>
-        	<version>1.2-20</version>
-        	<scope>provided</scope>
+        	<version>4.0.0</version>
         </dependency>
     </dependencies>
     <build>
