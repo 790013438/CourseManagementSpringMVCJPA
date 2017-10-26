@@ -18,15 +18,16 @@ import javax.persistence.Table;
 @Table(name="course")
 @NamedQuery(name="Course.findAll", query="SELECT c FROM Course c")
 public class Course implements Serializable {
-	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+    private static final long serialVersionUID = 1L;
 
-	private int credits;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int id;
 
-	private String name;
+    private int credits;
+
+    private String name;
 
     @Column(name="teacher_id")
     private int teacherId;
